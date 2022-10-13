@@ -4,9 +4,9 @@
 ## With Weibull distribution analysis
 ##
 ## Mark A. Hayes
-## Normandeau Associates, Inc.
+## U.S. Fish & Wildlife Service
 ##
-## 7/22/2019 
+## 10/13/2022
 ##
 ##
 ## The purpose of this analysis is to develop reproducible code for comparative curtailment 
@@ -399,7 +399,7 @@ y <- rweibull(1000, shape=1.954, scale=8.078) # using survival library
 est.par <- fitdistr(y, "weibull", lower = 0.001) # using MASS library
 plot(est.par)
 
-# 6/27/2019 - can't figure out how to plot the Weibull distribution. Would be easy in Mathematica
+
 
 #######################
 ##
@@ -931,7 +931,7 @@ E_cutin_to_7.0_Random_max+E_above_7.0+non_risky # annual production
 
 #######
 ##
-## To complete tables for AEP report we can stop here and don't need to proceed. Remaining code
+## To complete tables for the analysis we can stop here and don't need to proceed. Remaining code
 ## is optional and for information only.
 ##
 #######
@@ -1210,7 +1210,6 @@ dev.print(tiff, "density_vs_speed_100.tiff", height=4, width=6, units='in', res=
 
 ## Using fitdistrplus package
 
-# I believe the data dataframe is too long. Just using risky
 
 library("fitdistrplus")
 risky_wind <- risky$UV_080m
@@ -1220,9 +1219,7 @@ descdist(risky$UV_080m, boot = 1000)
 fw <- fitdist(risky_wind, "weibull")
 summary(fw)
 
-# I think the data dataframe is too long.
-
-# Trying risky
+# Risky
 
 fg <- fitdist(groundbeef$serving, "gamma")
 fln <- fitdist(groundbeef$serving, "lnorm")
