@@ -63,7 +63,7 @@ library(bReeze)
 
 # using the 2008 csv. This is the full set of WIND 10-minute increment data for the year 
 
-data = read.table(file.choose(), header=TRUE, sep=",") # e.g., "la9479lo246047_DateTime.csv".
+data = read.table(file.choose(), header=TRUE, sep=",") # e.g., "pincher_2008.csv".
 summary(data)
 
 ## Histogram of speed
